@@ -7,6 +7,8 @@ from rest_framework.views import APIView
 from accounts.serializers import UserSerializer
 
 # Create your views here.
+
+
 class UserView(APIView):
     """
     UserView handles the requests made to `/accounts/`
