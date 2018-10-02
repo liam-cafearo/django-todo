@@ -37,7 +37,8 @@ class TodoView(APIView):
             if pk is None:
                 # Get the `user` based on the username provided by the
                 # `query_params`
-                user = User.objects.get(username=request.query_params["username"])
+                user = User.objects.get(
+                    username=request.query_params["username"])
                 # Filter the `todo` items based on this `user`
                 todo_items = Todo.objects.filter(user=user)
                 # Serialize the data retrieved from the DB and serialize
